@@ -1,4 +1,4 @@
-<?
+<?php
 $lang = array();
 
 $lang['0'] = "Benutzernamen und Password erstellen zuerst.";
