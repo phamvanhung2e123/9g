@@ -1,0 +1,62 @@
+/**************************************************************************************************
+| 9Gag Clone Script
+| http://www.9gagclonescript.com
+| webmaster@9gagclonescript.com
+|
+|**************************************************************************************************
+|
+| By using this software you agree that you have read and acknowledged our End-User License 
+| Agreement available at http://www.9gagclonescript.com/eula.html and to be bound by it.
+|
+| Copyright (c) 9GagCloneScript.com. All rights reserved.
+|**************************************************************************************************/
+
+These are the steps for installing a new language, we will be doing an example for Czech, which we will abbreviate to "cz".
+
+1. Convert one of the provided languages in the include/lang folder (en, fr, de, es, pt, ru or tr) into Czech, naming the newly converted language cz.php
+
+
+2. Open include/config.php
+
+Find:
+elseif ($_REQUEST['language'] == "tr")
+
+Add Above:
+elseif ($_REQUEST['language'] == "cz")
+{
+	$_SESSION['language'] = "cz";
+}
+
+
+Find:
+elseif ($_SESSION['language'] == "tr")
+
+Add Above:
+elseif ($_SESSION['language'] == "cz")
+{
+	include("lang/cz.php");
+}
+
+
+3. Open themes/footer.tpl
+
+Find:
+<label for="lang-tr">
+
+Add Above:
+<label for="lang-cz">
+<input id="lang-cz" class="" type="radio" name="language" value="cz" {if $smarty.session.language eq "cz"}class="current" checked="checked"{/if}></input>Czech
+</label>
+
+
+
+4. Open themes/settings.tpl
+Find:
+<option  value="tr" {if $p.mylang eq "tr"}selected{/if}>t&uuml;rk&ccedil;e</option>
+
+Add Above:
+<option  value="cz" {if $p.mylang eq "cz"}selected{/if}>Czech</option>
+
+
+
+5. The Czech language would now be installed.
