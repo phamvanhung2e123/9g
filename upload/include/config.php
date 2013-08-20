@@ -1,12 +1,12 @@
-<?
+<?php
 $config = array();
 
 // Begin Configuration
-$config['basedir']     =  '/Applications/MAMP/9gag.com/upload';
-$config['baseurl']     =  'http://9gag.com:8888';
+$config['basedir']     =  '/var/www/html/9g/upload';
+$config['baseurl']     =  'http://w.9aws.com';
 
 $DBTYPE = 'mysql';
-$DBHOST = ':/Applications/MAMP/tmp/mysql/mysql.sock';
+$DBHOST = 'localhost';
 $DBUSER = 'root';
 $DBPASSWORD = 'root';
 $DBNAME = 'northwind';

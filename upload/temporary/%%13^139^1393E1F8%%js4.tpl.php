@@ -1,5 +1,5 @@
-<?php /* Smarty version 2.6.6, created on 2013-08-20 23:28:22
-         compiled from js5.tpl */ ?>
+<?php /* Smarty version 2.6.6, created on 2013-08-20 23:12:42
+         compiled from js4.tpl */ ?>
 <?php echo '
 <script type="text/javascript">
 $(\'.keyboard_link\').click(function(){
@@ -12,9 +12,7 @@ $("#overlay-container").addClass("hide");
 $(".keyboard-instruction").addClass("hide");	
 });
 });
-$(\'.report\').click(function(){
-$(\'#report_entry_id\').val($(this).attr(\'entryId\'));	
-$(\'#repost_link\').val(\'';  echo $this->_tpl_vars['baseurl'];  echo '/gag/\' + $(this).attr(\'entryId\'));	
+$(\'#report-item-link\').click(function(){
 $(\'#overlay-shadow\').removeClass(\'hide\');
 $(\'#overlay-container\').removeClass(\'hide\');
 $(\'#scriptolution-soft-report\').removeClass(\'hide\');
@@ -24,7 +22,7 @@ $(\'#overlay-shadow\').addClass(\'hide\');
 $(\'#overlay-container\').addClass(\'hide\');
 $(\'#scriptolution-soft-report\').addClass(\'hide\');
 });
-$(\'#report-submit\').click(function(){
+$(\'.submit-button\').click(function(){
 var e=0;
 if($(\'input[name="report-reason"]:checked\').val()){
 if($(\'input[name="report-reason"]:checked\').val()==4){
@@ -43,17 +41,16 @@ e=1;
 if(e){
 return false;
 }else{
-var pid=$(\'#report_entry_id\').val();
 var x=$(\'#repost_link\').val();
 var n=$(\'input[name="report-reason"]:checked\').val();
-sendreport(x,n,pid);
+sendreport(x,n);
 }
 });
-function sendreport(x,n,pid){
+function sendreport(x,n){
 jQuery.ajax({
 type:\'POST\',
 url:\' ';  echo $this->_tpl_vars['baseurl'];  echo '\'+ \'/report.php\',
-data:\'number=\'+n+\'&repost_link=\'+x+\'&pid=\' + pid,
+data:\'number=\'+n+\'&repost_link=\'+x+\'&pid=\' +  \'';  echo $this->_tpl_vars['p']['PID'];  echo '\' ,
 success:function(e){
 $(\'#overlay-shadow\').addClass(\'hide\');
 $(\'#overlay-container\').addClass(\'hide\');
