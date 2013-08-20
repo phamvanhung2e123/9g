@@ -3,7 +3,7 @@ $config = array();
 
 // Begin Configuration
 $config['basedir']     =  '/var/www/html/9g/upload';
-$config['baseurl']     =  'http://eroi.com';
+$config['baseurl']     =  'http://w.9aws.com';
 
 $DBTYPE = 'mysql';
 $DBHOST = 'localhost';

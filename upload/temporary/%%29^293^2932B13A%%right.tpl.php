@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.6, created on 2013-08-03 23:28:44
+<?php /* Smarty version 2.6.6, created on 2013-08-20 23:28:22
          compiled from right.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('insert', 'get_advertisement', 'right.tpl', 8, false),array('modifier', 'urlencode', 'right.tpl', 13, false),array('modifier', 'stripslashes', 'right.tpl', 34, false),)), $this); ?>
